@@ -20,7 +20,7 @@ const cardsData = getCardsData();
 function getCardsData() {}
 
 function createCards() {
-  cardsDate.forEach((card, index) => {
+  cardsData.forEach((card, index) => {
     createCard(card, index);
   });
 }
@@ -33,17 +33,17 @@ function createCard(data, index) {
   }
   card.innerHTML = `
   <div class="inner-card">
-  <div class="inner-card-front">
-    <p>
-      ${data.question}
-    </p>
+    <div class="inner-card-front">
+      <p>
+        ${data.question}
+      </p>
+    </div>
+    <div class="inner-card-back">
+      <p>
+        ${data.answer}
+      </p>
+    </div>
   </div>
-  <div class="inner-card-back">
-    <p>
-      ${data.answer}
-    </p>
-  </div>
-</div>
   `;
   card.addEventListener("click", () => card.classList.toggle("show-answer"));
   // Add to DOM cards
@@ -51,3 +51,71 @@ function createCard(data, index) {
   cardsContainer.appendChild(card);
   updateCurrentText();
 }
+
+function updateCurrentText() {
+  currentEl.innerText = `${currentActiveCard + 1}/${cardsEl.length}`;
+}
+
+// Get cards from local storage
+function getCardsData() {
+  const cards = JSON.parse(localStorage.getItem("cards"));
+  return cards === null ? [] : cards;
+}
+
+// Add card to local storage
+function setCardsData(cards) {
+  localStorage.setItem("cards", JSON.stringify(cards));
+  window.location.reload();
+}
+
+createCards();
+
+// Event Listeners
+
+// Next button
+nextBtn.addEventListener("click", () => {
+  cardsEl[currentActiveCard].className = "card left";
+  currentActiveCard = currentActiveCard + 1;
+  if (currentActiveCard > cardsEl.length - 1) {
+    currentActiveCard = cardsEl.length - 1;
+  }
+  cardsEl[currentActiveCard].className = "card active";
+  updateCurrentText();
+});
+
+// Prev button
+prevBtn.addEventListener("click", () => {
+  cardsEl[currentActiveCard].className = "card right";
+  currentActiveCard = currentActiveCard - 1;
+  if (currentActiveCard < 0) {
+    currentActiveCard = 0;
+  }
+  cardsEl[currentActiveCard].className = "card active";
+  updateCurrentText();
+});
+
+// Show add container
+showBtn.addEventListener("click", () => addContainer.classList.add("show"));
+// Hide add container
+hideBtn.addEventListener("click", () => addContainer.classList.remove("show"));
+
+addCardBtn.addEventListener("click", () => {
+  const question = questionEl.value;
+  const answer = answerEl.value;
+
+  if (question.trim() && answer.trim()) {
+    const newCard = { question, answer };
+    createCard(newCard);
+    questionEl.value = "";
+    answerEl.value = "";
+    addContainer.classList.remove("show");
+    cardsData.push(newCard);
+    setCardsData(cardsData);
+  }
+});
+
+clearBtn.addEventListener("click", () => {
+  localStorage.clear();
+  cardsContainer.innerHTML = "";
+  window.location.reload();
+});

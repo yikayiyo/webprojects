@@ -2,10 +2,15 @@
 
 * {
   box-sizing: border-box;
+  outline: none;
+  margin: 0;
 }
 
+/*
+  通用设置
+*/
 body {
-  background-color: #fff;
+  background-image: url("./pattern-leaves-white.jpg");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,21 +18,6 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: "Lato", sans-serif;
-  margin: 0;
-}
-
-#head {
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#head button {
-  z-index: 2;
-  border: none;
-  font-size: 30px;
-  transform: translate(100%, 10%);
 }
 
 .btn {
@@ -35,13 +25,9 @@ body {
   background-color: #fff;
   border: 1px solid #aaa;
   border-radius: 3px;
-  padding: 10px 15px;
   font-size: 14px;
-}
-
-.btn-small {
-  font-size: 12px;
-  padding: 5px 10px;
+  padding: 10px 15px;
+  margin-top: 20px;
 }
 
 .btn-ghost {
@@ -49,18 +35,49 @@ body {
   background-color: transparent;
 }
 
+/*
+  头部，包含h1和按钮（添加卡片）
+*/
+#head {
+  z-index: 2;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+#head button {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+#head button:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+/*
+  按钮：清空所有卡片
+*/
 .clear {
   position: absolute;
   left: 30px;
   bottom: 30px;
 }
 
+.clear:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+/*
+  卡片区
+*/
 .cards {
-  perspective: 1000px;
   position: relative;
   height: 300px;
   width: 500px;
-  max-width: 100%;
 }
 
 .card {
@@ -71,8 +88,6 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  transform: translateX(50%) rotateY(-10deg);
-  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .card.active {
@@ -80,10 +95,17 @@ body {
   opacity: 1;
   z-index: 10;
   transform: translateX(0) rotateY(0deg);
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .card.left {
   transform: translateX(-50%) rotateY(10deg);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.card.right {
+  transform: translateX(50%) rotateY(-10deg);
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .inner-card {
@@ -104,16 +126,23 @@ body {
 
 .inner-card-front,
 .inner-card-back {
+  background-image: url("./pattern-confetti.jpg");
   backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: table;
   height: 100%;
   width: 100%;
   background-color: #fff;
+}
+
+.inner-card p {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  max-width: 100%;
+  word-break: break-all;
 }
 
 .inner-card-front {
@@ -154,6 +183,7 @@ body {
 }
 
 .add-container {
+  background-image: url("https://www.animal-crossing.com/new-horizons/assets/img/global/patterns/pattern-leaves-white.jpg");
   opacity: 0;
   z-index: -1;
   background-color: #f0f0f0;
@@ -170,7 +200,7 @@ body {
   transition: 0.3s ease;
 }
 
-.add-container.hide {
+.add-container.show {
   opacity: 1;
   z-index: 2;
 }
@@ -181,6 +211,12 @@ body {
 
 .add-container h1 button {
   margin-left: 10px;
+  font-size: 30px;
+}
+
+.add-container h1 button:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
 }
 
 .form-group label {
@@ -205,4 +241,8 @@ body {
 #answer {
   min-height: 200px;
   max-height: 500px;
+}
+
+button > i {
+  padding-right: 10px;
 }
