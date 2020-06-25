@@ -25,4 +25,5 @@ function setDate() {
 }
 
 setInterval(setDate, 1000);
+window.onload = breath;
 setInterval(breath, 7000);
