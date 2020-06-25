@@ -2,6 +2,12 @@ const secondHand = document.getElementById("second-hand");
 const minHand = document.getElementById("min-hand");
 const hourHand = document.getElementById("hour-hand");
 
+const clockFace = document.querySelector(".clock-face");
+
+function breath() {
+  clockFace.classList.toggle("breath");
+}
+
 function setDate() {
   const now = new Date();
 
@@ -19,3 +25,4 @@ function setDate() {
 }
 
 setInterval(setDate, 1000);
+setInterval(breath, 7000);

@@ -1,6 +1,12 @@
 body {
   background-color: #ffa981;
   margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header {
+  margin: 50px 10% 0 10%;
 }
 
 .clock {
@@ -25,6 +31,12 @@ body {
     #e1ecde 63%,
     #079554 calc(63% + 1px)
   );
+  transition: all 7s ease;
+}
+
+.breath {
+  transform: scale(1.2);
+  transition: transform 7s ease;
 }
 
 .clock-face:after {
@@ -35,6 +47,131 @@ body {
   border-radius: 50%;
   background-color: #f8ccce;
   position: absolute;
+}
+
+.quarter {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+}
+.quarter div {
+  height: 10%;
+  width: 2.4%;
+  border-radius: 1vmin;
+  background-color: #c41a21;
+  position: absolute;
+}
+.quarter div:nth-child(even) {
+  top: 45%;
+  transform: rotate(90deg);
+}
+.quarter div:nth-child(odd) {
+  left: 48.8%;
+}
+.quarter div:nth-child(1) {
+  top: 0;
+}
+.quarter div:nth-child(2) {
+  right: 3%;
+}
+.quarter div:nth-child(3) {
+  bottom: 0;
+}
+.quarter div:nth-child(4) {
+  left: 3%;
+}
+
+.seeds {
+  width: 85%;
+  height: 85%;
+  overflow: hidden;
+  position: relative;
+}
+.seeds div {
+  display: block;
+  height: 1.5vmin;
+  width: 1vmin;
+  background-color: #5a0b0e;
+  border-radius: 30px 200px 200px 200px;
+  -moz-border-radius: 30px 200px 200px 200px;
+  -webkit-border-radius: 30px 200px 200px 200px;
+  border: 0px solid #000000;
+  position: absolute;
+}
+.seeds div:nth-child(1) {
+  top: 45%;
+  left: 16%;
+  transform: rotate(187deg);
+}
+.seeds div:nth-child(2) {
+  top: 64%;
+  left: 12%;
+  transform: rotate(293deg);
+}
+.seeds div:nth-child(3) {
+  top: 22%;
+  left: 18%;
+  transform: rotate(292deg);
+}
+.seeds div:nth-child(4) {
+  top: 67%;
+  left: 24%;
+  transform: rotate(145deg);
+}
+.seeds div:nth-child(5) {
+  top: 70%;
+  left: 37%;
+  transform: rotate(137deg);
+}
+.seeds div:nth-child(6) {
+  top: 24%;
+  left: 59%;
+  transform: rotate(64deg);
+}
+.seeds div:nth-child(7) {
+  top: 42%;
+  left: 70%;
+  transform: rotate(65deg);
+}
+.seeds div:nth-child(8) {
+  top: 65%;
+  left: 51%;
+  transform: rotate(153deg);
+}
+.seeds div:nth-child(9) {
+  top: 72%;
+  left: 62%;
+  transform: rotate(165deg);
+}
+.seeds div:nth-child(10) {
+  top: 24%;
+  left: 58%;
+  transform: rotate(139deg);
+}
+.seeds div:nth-child(11) {
+  top: 57%;
+  left: 69%;
+  transform: rotate(317deg);
+}
+.seeds div:nth-child(12) {
+  top: 46%;
+  left: 17%;
+  transform: rotate(72deg);
+}
+.seeds div:nth-child(13) {
+  top: 27%;
+  left: 83%;
+  transform: rotate(217deg);
+}
+.seeds div:nth-child(14) {
+  top: 25%;
+  left: 70%;
+  transform: rotate(208deg);
+}
+.seeds div:nth-child(15) {
+  top: 27%;
+  left: 82%;
+  transform: rotate(123deg);
 }
 
 .hand {
@@ -66,4 +203,11 @@ body {
   width: 2.4%;
   left: 48.8%;
   background-color: #6f0f13;
+}
+
+footer {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  text-align: center;
 }
