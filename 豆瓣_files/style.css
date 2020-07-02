@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+section nav
+*/
+.anony-nav-links h1 {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+  width: 160px;
+  height: 34px;
+  margin: 0 20px 0 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: normal;
+  background: url(./logo_db.png) no-repeat 0 0;
+}
+
+#anony-nav h1 a {
+  display: block;
+  height: 34px;
+  line-height: 10em;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#anony-nav .anony-srh {
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+  width: 270px;
+  height: 30px;
+  border: 1px solid #c3c3c3;
+}
+
+#anony-nav .anony-srh .inp {
+  height: 30px;
+  overflow: hidden;
+  display: block;
+}
+#anony-nav .anony-srh .inp input {
+  width: 240px;
+  border: none;
+  font-size: 13px;
+  height: 20px;
+  padding: 5px;
+}
+
+#anony-nav .anony-srh .inp input:focus {
+  outline: none;
+}
+
+#anony-nav .anony-srh .bn input {
+  border: none;
+  background: transparent;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  cursor: pointer;
+}
+
+#anony-nav .anony-srh .inp {
+  display: block;
+  overflow: hidden;
+}
+#anony-nav .anony-srh .bn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("./bn_srh_1.png") 50% 50% no-repeat;
+}
+
+.anony-nav-links input[type="text"] {
+  font-size: 16px;
+}
+
+.anony-nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.anony-nav-links ul li {
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+#anony-nav .anony-nav-links li a {
+  background-image: url("./anony_nav_logo.png");
+  zoom: 1;
+  display: block;
+  width: 40px;
+  height: 20px;
+  overflow: hidden;
+  margin: 0;
+  outline: none;
+  line-height: 10em;
+}
+
+#anony-nav .anony-nav-links li .lnk-book {
+  background-position: 0 0;
+}
+
+#anony-nav .anony-nav-links li .lnk-movie {
+  background-position: -60px 0;
+}
+
+#anony-nav .anony-nav-links li .lnk-music {
+  background-position: -120px 0;
+}
+#anony-nav .anony-nav-links li .lnk-events {
+  background-position: -301px 0;
+}
+
+#anony-nav .anony-nav-links li .lnk-group {
+  background-position: -180px 0;
+}
+
+#anony-nav .anony-nav-links li .lnk-read {
+  background-image: url("./ic_read_home_nav.png");
+}
+#anony-nav .anony-nav-links li .lnk-fm {
+  background-position: -241px 0;
+}
+#anony-nav .anony-nav-links li .lnk-shijian {
+  background-image: url("./ic_shijian_home_nav.png");
+}
+
+#anony-nav .anony-nav-links li .lnk-market {
+  width: 42px;
+  background-position: -421px 0;
+}
+a {
+  text-decoration: none;
+}
+
+/*
+reg-new
+*/
+#anony-reg-new {
+  background-image: url(https://img9.doubanio.com/view/puppy_image/raw/public/16ad990ec23uwn790d4.jpg);
+  margin-bottom: 25px;
+  background-size: contain;
+  background-position: -webkit-calc(50% - 305px) top;
+  background-position: calc(50% - 305px) top; /*调整背景图片位置*/
+  background-repeat: no-repeat;
+  background-color: #edf4ed;
+}
+
+#anony-reg-new .wrapper {
+  width: 950px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 0 4px;
+  overflow: visible;
+  zoom: 1;
+}
+/* #anony-reg-new .wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: 0 -150px;
+} */
+#anony-reg-new .wrapper:after {
+  content: "\0020"; /*清除浮动*/
+  display: block;
+  clear: both;
+}
+#anony-reg-new .login {
+  position: relative;
+  width: 300px;
+  float: right;
+  font-size: 0;
+  letter-spacing: -0.31em;
+}
+
+#anony-reg-new .app {
+  position: absolute;
+  top: 150px;
+  right: 330px;
+}
+
+#anony-reg-new .app-title {
+  margin: 7px 0;
+  font-size: 25px;
+  color: #111;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+#anony-reg-new .app-slogan {
+  margin: 0 0 18px;
+  font-size: 0;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+#anony-reg-new .app-slogan:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+#anony-reg-new .lnk-app {
+  display: inline-block;
+  zoom: 1;
+  padding: 9px 21px;
+  margin-right: 2px;
+  vertical-align: top;
+  border-radius: 2px;
+  font-size: 12px;
+  background: #00b51d;
+  color: #fff;
+  line-height: 1;
+}
+
+#anony-reg-new .app-qr {
+  display: inline-block;
+  zoom: 1;
+  position: relative;
+}
+
+#anony-reg-new .app-qr-expand {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 20px 5px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  background: #fff;
+  line-height: 13px;
+  white-space: nowrap;
+}

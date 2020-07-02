@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Douban</title>
+  </head>
+  <body>
+    <section id="anony-nav">
+      <div class="anony-nav-links">
+        <div>
+          <h1>
+            <a href="index.html">豆瓣</a>
+          </h1>
+          <div class="anony-srh">
+            <form action="https://www.douban.com/search" method="get">
+              <span class="inp"
+                ><input
+                  type="text"
+                  maxlength="60"
+                  size="12"
+                  placeholder="书籍、电影、音乐、小组、小站、成员"
+                  name="q"
+                  autocomplete="off"
+              /></span>
+              <span class="bn"><input type="submit" value="搜索" /></span>
+            </form>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <a target="_blank" class="lnk-book" href="https://book.douban.com"
+              >豆瓣读书</a
+            >
+          </li>
+          <li>
+            <a target="_blank" class="lnk-movie" href="https://movie.douban.com"
+              >豆瓣电影</a
+            >
+          </li>
+          <li>
+            <a target="_blank" class="lnk-music" href="https://music.douban.com"
+              >豆瓣音乐</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              class="lnk-events"
+              href="https://www.douban.com/location/"
+              >豆瓣同城</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              class="lnk-group"
+              href="https://www.douban.com/group/"
+              >豆瓣小组</a
+            >
+          </li>
+          <li>
+            <a target="_blank" class="lnk-read" href="https://read.douban.com"
+              >豆瓣阅读</a
+            >
+          </li>
+          <li>
+            <a target="_blank" class="lnk-fm" href="https://douban.fm"
+              >豆瓣FM</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              class="lnk-shijian"
+              href="https://time.douban.com/?dt_time_source=douban-web_anonymous_index_top_nav"
+              >豆瓣时间</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              class="lnk-market"
+              href="https://market.douban.com?utm_campaign=anonymous_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web"
+              >豆瓣豆品</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="anony-reg-new">
+      <div class="wrapper">
+        <div class="login">
+          <iframe
+            style="height: 300px; width: 300px;"
+            frameborder="0"
+            src="//accounts.douban.com/passport/login_popup?login_source=anony"
+          ></iframe>
+        </div>
+        <div class="app">
+          <p class="app-title">豆瓣<span>6.0</span></p>
+          <p class="app-slogan"></p>
+          <a
+            href="https://www.douban.com/doubanapp/app?channel=nimingye"
+            class="lnk-app"
+            >下载豆瓣 App</a
+          >
+          <div class="app-qr">
+            <a href="javascript: void 0;" class="lnk-qr" id="expand-qr"
+              ><img
+                src="https://img3.doubanio.com/f/sns/0c708de69ce692883c1310053c5748c538938cb0/pics/sns/anony_home/icon_qrcode_green.png"
+                width="28"
+                height="28"
+            /></a>
+            <div class="app-qr-expand">
+              <img
+                src="https://img3.doubanio.com/f/sns/1cad523e614ec4ecb6bf91b054436bb79098a958/pics/sns/anony_home/doubanapp_qrcode.png"
+                width="160"
+                height="160"
+              />
+              <p>iOS / Android 扫码直接下载</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="anony-sns"></section>
+    <section id="anony-time"></section>
+    <section id="anony-movie"></section>
+    <section id="anony-group"></section>
+    <section id="anony-book"></section>
+    <section id="anony-music"></section>
+    <section id="anony-market"></section>
+    <section id="anony-events"></section>
+    <script src="script.js"></script>
+  </body>
+</html>
