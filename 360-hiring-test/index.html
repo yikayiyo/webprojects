@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>360 hiring</title>
+  </head>
+  <script>
+    // div里面有个数字60，点击按钮，让它每一秒减1，直至减为0
+    function test() {
+      const time = document.getElementById("time");
+      setInterval(() => {
+        if (time.innerText - 1 === -1) return;
+        time.innerText -= 1;
+        console.log(time.innerText);
+      }, 1000);
+      clearInterval();
+    }
+  </script>
+  <body>
+    <div id="time">60</div>
+    <button onclick="test()">开始倒数！</button>
+  </body>
+</html>
