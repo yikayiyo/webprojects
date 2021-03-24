@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>层叠上下文和z-index</title>
+  </head>
+  <style>
+    body {
+      margin: 40px;
+    }
+
+    .box {
+      display: inline-block;
+      width: 200px;
+      line-height: 200px;
+      text-align: center;
+      background-color: #ea5;
+      border: 2px solid black;
+      margin-left: -60px;
+      vertical-align: top;
+    }
+
+    .one {
+      margin-left: 0;
+    }
+    .two {
+      margin-top: 30px;
+    }
+    .three {
+      margin-top: 60px;
+    }
+    .positioned {
+      position: relative;
+      background-color: #5ae;
+      /* -1时Three在最上面 */
+      /* z-index: -1;   */
+      z-index: 1;
+    }
+    .absolute {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      height: 2em;
+      background-color: aliceblue;
+      border: 2px dashed #888;
+      /* 不管这里设置多小，nested永远在One的上面，因为One是根 */
+      /* 不管设置多大，nested永远在Two的下面，因为One作为根是在Two的下面 */
+      z-index: 100;
+      line-height: initial;
+      padding: 1em;
+    }
+  </style>
+  <body>
+    <div class="box positioned one">
+      One
+      <div class="absolute">nested</div>
+    </div>
+    <div class="box positioned two">Two</div>
+    <div class="box three">Three</div>
+  </body>
+</html>
