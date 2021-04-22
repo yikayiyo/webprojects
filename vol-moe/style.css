@@ -1,0 +1,179 @@
+/*
+  normalize style
+*/
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: #fff;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, Tahoma, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei",
+    "Microsoft Sans Serif", "Noto Sans", "Droid Serif", sans-serif;
+}
+
+/*
+  頂部
+*/
+
+.header-wrapper {
+  max-width: 460px;
+  padding: 0 5px;
+  /* background-color: #dfa; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid green;
+}
+
+.header-icon img {
+  width: 150px;
+  padding-top: 2px;
+}
+
+/*
+  類別部分
+*/
+.main-wrapper {
+  max-width: 460px;
+}
+
+.categories > ul:first-child {
+  background-color: #fff;
+}
+
+.categories > ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f4f4f4;
+}
+
+.categories > ul > li.status,
+.categories > ul > li.sort {
+  background-color: #f4f4f4;
+}
+
+.categories > ul > li {
+  display: inline-block;
+  padding: 0.25rem 0;
+  flex: 1;
+  text-align: center;
+}
+
+.categories > ul > li:hover {
+  background-color: lightsalmon;
+}
+
+li.active {
+  background-color: #bbddff;
+}
+
+.search-wrapper {
+  padding: 5px 10px;
+  background-color: #efeff4;
+}
+
+.search-wrapper > input {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0;
+  width: 100%;
+  text-align: center;
+  border-style: none;
+  border-radius: 2px;
+}
+
+/*
+  翻頁
+*/
+
+.page-wrapper {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.page-wrapper a.btn {
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+  line-height: 2.3;
+  font-size: 13px;
+}
+
+.page-buttons {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a.btn {
+  display: block;
+}
+
+a.btn.next-page {
+  color: #fff;
+  background-color: #1aad19;
+}
+
+/* 漫畫 */
+.comics-wrapper {
+  width: 100%;
+  padding: 10px 10px;
+  /* background-color: lightpink; */
+}
+
+div.row.flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+div.comic-item {
+  width: 33%;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+div.comic-item * {
+  display: block;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+/* 底部 */
+
+footer {
+  max-width: 460px;
+  margin-top: 1.5rem;
+  color: #666;
+  line-height: 16px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid green;
+}
+
+footer > * {
+  margin-top: 1rem;
+}
+
+footer > ul > li {
+  display: inline-block;
+}
+
+footer > ul + * {
+  display: inline-block;
+  margin: 0.5rem 0;
+}
