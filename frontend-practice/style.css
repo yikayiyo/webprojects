@@ -1,6 +1,6 @@
 :root {
   box-sizing: border-box;
-  font-family: Archivo, sans-serif;
+  font: 112.5%/1.45em georgia, serif, sans-serif;
 }
 
 *,
@@ -13,9 +13,14 @@
   text-decoration: none;
 }
 
-.inner {
-  max-width: 1200px;
-  margin: 0 auto;
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Archivo, sans-serif;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
 }
 
 header {
@@ -29,12 +34,20 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1rem 1.0875rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header-menu > h1 {
   font-weight: 700;
   font-size: 2.25rem;
   line-height: 1.1;
+}
+
+.header-menu > h1 > a {
+  font-size: 30px;
+  color: #333;
+  display: flex;
 }
 
 .header-menu > div.menu-links {
@@ -44,10 +57,16 @@ header {
 
 .menu-links > a {
   margin: 0 15px;
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: 600;
   transition: 0.2s;
+  text-decoration: underline;
   color: #333;
+  display: flex;
+}
+
+.menu-links a:last-child {
+  margin: 0 0 0 10px;
 }
 
 .main {
