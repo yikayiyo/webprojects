@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  background-color: #090b1a;
+  padding: 88px 24px;
+  font-family: "Inter", "Lexend Deca", sans-serif;
+  font-size: 15px;
+}
+
+main {
+  background-color: #1b1938;
+}
+
+.card {
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+.image-wrapper {
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.image-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(170, 92, 219, 0.45);
+  border-radius: 10px 10px 0 0;
+}
+
+.info {
+  text-align: center;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: 45px;
+}
+
+.info h1 {
+  font-size: 25px;
+  line-height: 1.25;
+  color: white;
+}
+
+.info h1 strong {
+  color: #aa5cdb;
+}
+
+.info p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.info .info-description {
+  margin-top: 30px;
+}
+
+.stat {
+  margin-top: 50px;
+}
+
+.stat div {
+  margin-bottom: 36px;
+}
+
+.stat p {
+  text-transform: uppercase;
+}
+
+.attribution {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.attribution a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
