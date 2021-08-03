@@ -26,7 +26,7 @@ Users should be able to:
 
 ![mobile-shot](./screenshots/mobile.png)
 
-![unfinished-destop]()
+![desktop-shot](./screenshots/desktop.png)
 
 ### Links
 
@@ -57,4 +57,4 @@ sass related vscode extensions
 
 ## Author
 
-- Frontend Mentor - [@yikayiyo](https://www.frontendmentor.io/profile/yikayiyo)
+- Frontend Mentor - legao[@yikayiyo](https://www.frontendmentor.io/profile/yikayiyo)
