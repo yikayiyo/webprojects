@@ -1,0 +1,89 @@
+// colors
+$color-bright-orange: hsl(31, 77%, 52%);
+$color-dark-cyan: hsl(184, 100%, 22%);
+$color-very-dark-cyan: hsl(179, 100%, 13%);
+$color-main: hsla(0, 0%, 100%, 0.75);
+$color-light-gray: hsl(0, 0%, 95%);
+
+//fonts
+$font-family: "Big Shoulders Display", cursive, "Lexend Deca", sans-serif;
+$font-size: 15px;
+
+// css reset
+*,
+*::before,
+*::after {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+html {
+	box-sizing: inherit;
+	font-size: $font-size;
+	font-family: $font-family;
+}
+
+body {
+	background-color: $color-main;
+}
+
+.card {
+	margin: 5.867rem 1.6rem;
+	.card-item {
+		padding: 3.2rem;
+		.card-item-title-wrapper {
+			margin: 2.333rem auto;
+			.card-item-title {
+				color: $color-light-gray;
+				font-size: 2.667rem;
+				text-transform: uppercase;
+			}
+		}
+		.card-item-content-wrapper {
+			.card-item-content {
+				font-family: "Lexend Deca";
+				color: $color-main;
+				line-height: 1.5;
+			}
+		}
+		.card-item-button-wrapper {
+			margin-top: 1.667rem;
+			.card-item-button {
+				font-family: "Lexend Deca";
+				display: inline-block;
+				background-color: $color-light-gray;
+				padding: 0.967rem 2.2rem;
+				border-radius: 2.2rem;
+			}
+		}
+	}
+
+	.card-item-sedans {
+		border-radius: 0.4rem 0.4rem 0 0;
+		background-color: $color-bright-orange;
+		.card-item-button {
+			color: $color-bright-orange;
+		}
+	}
+
+	.card-item-suvs {
+		background-color: $color-dark-cyan;
+		.card-item-button {
+			color: $color-dark-cyan;
+		}
+	}
+
+	.card-item-luxury {
+		border-radius: 0 0 0.4rem 0.4rem;
+		background-color: $color-very-dark-cyan;
+		.card-item-button {
+			color: $color-very-dark-cyan;
+		}
+	}
+}

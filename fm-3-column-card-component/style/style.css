@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-size: 15px;
+  font-family: "Big Shoulders Display", cursive, "Lexend Deca", sans-serif;
+}
+
+body {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.card {
+  margin: 5.867rem 1.6rem;
+}
+
+.card .card-item {
+  padding: 3.2rem;
+}
+
+.card .card-item .card-item-title-wrapper {
+  margin: 2.333rem auto;
+}
+
+.card .card-item .card-item-title-wrapper .card-item-title {
+  color: #f2f2f2;
+  font-size: 2.667rem;
+  text-transform: uppercase;
+}
+
+.card .card-item .card-item-content-wrapper .card-item-content {
+  font-family: "Lexend Deca";
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+.card .card-item .card-item-button-wrapper {
+  margin-top: 1.667rem;
+}
+
+.card .card-item .card-item-button-wrapper .card-item-button {
+  font-family: "Lexend Deca";
+  display: inline-block;
+  background-color: #f2f2f2;
+  padding: 0.967rem 2.2rem;
+  border-radius: 2.2rem;
+}
+
+.card .card-item-sedans {
+  border-radius: 0.4rem 0.4rem 0 0;
+  background-color: #e38826;
+}
+
+.card .card-item-sedans .card-item-button {
+  color: #e38826;
+}
+
+.card .card-item-suvs {
+  background-color: #006970;
+}
+
+.card .card-item-suvs .card-item-button {
+  color: #006970;
+}
+
+.card .card-item-luxury {
+  border-radius: 0 0 0.4rem 0.4rem;
+  background-color: #004241;
+}
+
+.card .card-item-luxury .card-item-button {
+  color: #004241;
+}
+/*# sourceMappingURL=style.css.map */
