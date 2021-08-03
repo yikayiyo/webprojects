@@ -84,4 +84,34 @@ body {
 .card .card-item-luxury .card-item-button {
   color: #004241;
 }
+
+@media screen and (min-width: 1440px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 63.89%;
+    margin: 11.333rem auto;
+  }
+  .card .card-item .card-item-button-wrapper {
+    margin-top: 5.667rem;
+  }
+  .card .card-item-sedans {
+    -webkit-box-flex: 33.33%;
+        -ms-flex: 33.33%;
+            flex: 33.33%;
+    border-radius: 0.4rem 0 0 0.4rem;
+  }
+  .card .card-item-suvs {
+    -webkit-box-flex: 33.33%;
+        -ms-flex: 33.33%;
+            flex: 33.33%;
+  }
+  .card .card-item-luxury {
+    -webkit-box-flex: 33.33%;
+        -ms-flex: 33.33%;
+            flex: 33.33%;
+    border-radius: 0 0.4rem 0.4rem 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */

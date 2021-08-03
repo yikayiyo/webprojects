@@ -87,3 +87,29 @@ body {
 		}
 	}
 }
+
+@media screen and (min-width: 1440px) {
+	.card {
+		display: flex;
+		width: 63.89%;
+		margin: 11.333rem auto;
+		.card-item {
+			.card-item-button-wrapper {
+				margin-top: 5.667rem;
+			}
+		}
+		.card-item-sedans {
+			flex: 33.33%;
+			border-radius: 0.4rem 0 0 0.4rem;
+		}
+
+		.card-item-suvs {
+			flex: 33.33%;
+		}
+
+		.card-item-luxury {
+			flex: 33.33%;
+			border-radius: 0 0.4rem 0.4rem 0;
+		}
+	}
+}
