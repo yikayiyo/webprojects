@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: https://www.frontendmentor.io/solutions/3columncardcomponent-v4asQ95Nm
+- Live Site URL: https://frontendmentor-3-columns-card-component.vercel.app/
 
 ## My process
 
