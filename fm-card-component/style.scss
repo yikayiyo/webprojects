@@ -32,6 +32,7 @@ main {
 .card {
 	border-radius: 0.667rem;
 	padding-bottom: 0.667rem;
+	margin: 5.8rem 1.6rem;
 }
 
 .image-wrapper {
@@ -95,7 +96,7 @@ main {
 }
 
 .attribution {
-	margin-top: 1.333rem;
+	margin: -2.667rem 0 2rem 0;
 	text-align: center;
 	a {
 		color: $color-main-heading;
@@ -107,11 +108,9 @@ main {
 }
 
 @media screen and(min-width: 1440px) {
-	body {
+	.card {
 		width: 80%;
 		margin: 11.66rem auto;
-	}
-	.card {
 		display: flex;
 		padding-bottom: 0;
 		.image-wrapper {
