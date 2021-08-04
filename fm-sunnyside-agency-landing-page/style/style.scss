@@ -86,10 +86,58 @@ body {
 			width: 100%;
 		}
 		.grids-item-title {
+			margin: 0;
 			font-family: "Fraunces";
+			font-weight: 900;
+			font-size: 2rem;
+			line-height: 1.233;
 			color: $color-des-blue;
 		}
 		.grids-item-content {
+			color: $color-dark-gray-blue;
+			margin-top: 30px;
+			line-height: 1.667;
 		}
+		.grids-item-link-wrapper {
+			margin-top: 2rem;
+			.grids-item-link {
+				color: $color-des-blue;
+				text-transform: uppercase;
+				font-family: "Fraunces";
+				font-size: 0.9rem;
+				position: relative;
+				text-decoration: none;
+				letter-spacing: 3px;
+			}
+			.first-learn-more::after {
+				text-align: center;
+				display: block;
+				content: "";
+				width: 148px;
+				height: 10px;
+				background-color: $color-primary-yellow;
+				position: absolute;
+				bottom: -3px;
+				left: -10px;
+				z-index: -1;
+				border-radius: 15%;
+			}
+			.second-learn-more::after {
+				text-align: center;
+				display: block;
+				content: "";
+				width: 148px;
+				height: 10px;
+				background-color: $color-primary-softred;
+				position: absolute;
+				bottom: -3px;
+				left: -10px;
+				z-index: -1;
+				border-radius: 15%;
+			}
+		}
+	}
+	.intro {
+		padding: 64px 18px;
 	}
 }
