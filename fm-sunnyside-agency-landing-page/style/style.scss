@@ -1,0 +1,17 @@
+// ---------- variables ----------
+$font-family: "Barlow", "Fraunces", sans-serif, serif;
+
+// ----------------------------------------
+:root {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $font-family;
+}
