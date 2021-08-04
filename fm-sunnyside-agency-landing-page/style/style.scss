@@ -30,6 +30,22 @@ $color-dark-gray-blue: hsl(232, 10%, 55%);
 $color-gray-blue: hsl(210, 4%, 67%);
 $color-entry-title: hsl(0, 0%, 100%);
 
+@mixin under-learn-more($tag, $color) {
+	#{$tag}::after {
+		text-align: center;
+		display: block;
+		content: "";
+		width: 148px;
+		height: 10px;
+		background-color: $color;
+		position: absolute;
+		bottom: -3px;
+		left: -10px;
+		z-index: -1;
+		border-radius: 15%;
+	}
+}
+
 // ----------------------------------------
 :root {
 	box-sizing: border-box;
@@ -109,32 +125,8 @@ body {
 				text-decoration: none;
 				letter-spacing: 3px;
 			}
-			.first-learn-more::after {
-				text-align: center;
-				display: block;
-				content: "";
-				width: 148px;
-				height: 10px;
-				background-color: $color-primary-yellow;
-				position: absolute;
-				bottom: -3px;
-				left: -10px;
-				z-index: -1;
-				border-radius: 15%;
-			}
-			.second-learn-more::after {
-				text-align: center;
-				display: block;
-				content: "";
-				width: 148px;
-				height: 10px;
-				background-color: $color-primary-softred;
-				position: absolute;
-				bottom: -3px;
-				left: -10px;
-				z-index: -1;
-				border-radius: 15%;
-			}
+			@include under-learn-more(".first-learn-more", $color-primary-yellow);
+			@include under-learn-more(".second-learn-more", $color-primary-softred);
 		}
 	}
 	.intro {
