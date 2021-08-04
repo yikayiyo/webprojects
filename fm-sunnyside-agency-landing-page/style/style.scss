@@ -132,4 +132,44 @@ body {
 	.intro {
 		padding: 64px 18px;
 	}
+
+	.graphic-design-container {
+		color: $color-primary-graphic-text;
+		padding: 60px 20px;
+		background: center top / cover no-repeat
+			url("../images/mobile/image-graphic-design.jpg");
+		.graphic-design-title-wrapper {
+			margin-top: 340px;
+			.graphic-design-title {
+				font-family: "Fraunces";
+				font-size: 1.567rem;
+				font-weight: 900;
+			}
+		}
+		.graphic-design-content-wrapper {
+			line-height: 1.667;
+			font-size: 16px;
+			margin-top: 2rem;
+		}
+	}
+
+	.photo-graphy-container {
+		color: $color-primary-photography-text;
+		padding: 60px 20px;
+		background: center top / cover no-repeat
+			url("../images/mobile/image-photography.jpg");
+		.photo-graphy-title-wrapper {
+			margin-top: 340px;
+			.photo-graphy-title {
+				font-family: "Fraunces";
+				font-size: 1.567rem;
+				font-weight: 900;
+			}
+		}
+		.photo-graphy-content-wrapper {
+			line-height: 1.667;
+			font-size: 16px;
+			margin-top: 2rem;
+		}
+	}
 }

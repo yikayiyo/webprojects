@@ -124,4 +124,48 @@ body {
 .grids .intro {
   padding: 64px 18px;
 }
+
+.grids .graphic-design-container {
+  color: #25564b;
+  padding: 60px 20px;
+  background: center top/cover no-repeat url("../images/mobile/image-graphic-design.jpg");
+}
+
+.grids .graphic-design-container .graphic-design-title-wrapper {
+  margin-top: 340px;
+}
+
+.grids .graphic-design-container .graphic-design-title-wrapper .graphic-design-title {
+  font-family: "Fraunces";
+  font-size: 1.567rem;
+  font-weight: 900;
+}
+
+.grids .graphic-design-container .graphic-design-content-wrapper {
+  line-height: 1.667;
+  font-size: 16px;
+  margin-top: 2rem;
+}
+
+.grids .photo-graphy-container {
+  color: #19536b;
+  padding: 60px 20px;
+  background: center top/cover no-repeat url("../images/mobile/image-photography.jpg");
+}
+
+.grids .photo-graphy-container .photo-graphy-title-wrapper {
+  margin-top: 340px;
+}
+
+.grids .photo-graphy-container .photo-graphy-title-wrapper .photo-graphy-title {
+  font-family: "Fraunces";
+  font-size: 1.567rem;
+  font-weight: 900;
+}
+
+.grids .photo-graphy-container .photo-graphy-content-wrapper {
+  line-height: 1.667;
+  font-size: 16px;
+  margin-top: 2rem;
+}
 /*# sourceMappingURL=style.css.map */
