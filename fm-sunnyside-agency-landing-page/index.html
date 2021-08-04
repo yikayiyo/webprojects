@@ -21,7 +21,6 @@
 			href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./style/normalize.css" />
 		<link rel="stylesheet" href="./style/style.css" />
 		<title>Frontend Mentor | Sunnyside agency landing page</title>
 		<style>
@@ -38,19 +37,28 @@
 		<div class="container">
 			<main class="hero">
 				<section class="entry">
-					<div class="header-logo">
-						<img src="./images/logo.svg" alt="website logo" />
+					<div class="header-wrapper">
+						<div class="header-logo">
+							<img src="./images/logo.svg" alt="website logo" />
+						</div>
+						<menu class="header-menu">
+							<a class="toggle-menu">
+								<img src="./images/icon-hamburger.svg" alt="" />
+							</a>
+							<ul>
+								<li class="header-menu-item">menu1</li>
+								<li class="header-menu-item">menu2</li>
+								<li class="header-menu-item">menu3</li>
+								<li class="header-menu-item">menu4</li>
+							</ul>
+						</menu>
 					</div>
-					<menu class="header-menu">
-						<ul>
-							<li class="header-menu-item">menu1</li>
-							<li class="header-menu-item">menu2</li>
-							<li class="header-menu-item">menu3</li>
-							<li class="header-menu-item">menu4</li>
-						</ul>
-					</menu>
-					<div><h1>we are creatives</h1></div>
-					<div><img src="./images/icon-arrow-down.svg" alt="" /></div>
+					<div class="entry-title-wrapper">
+						<h1 class="entry-title">we are creatives</h1>
+					</div>
+					<div class="arrow-down-wrapper">
+						<img class="arrow-down" src="./images/icon-arrow-down.svg" alt="" />
+					</div>
 				</section>
 				<section class="grids">
 					<div class="grids-item">
@@ -58,17 +66,17 @@
 					</div>
 					<div class="grids-item">
 						<div>
-							<h1>Transform your brand</h1>
+							<h1 class="grids-item-title">Transform your brand</h1>
 						</div>
 						<div>
-							<p>
-								we are a full-service creative agency speciallizing in helping
+							<p class="grids-item-content">
+								We are a full-service creative agency speciallizing in helping
 								brands grow fast. Engage your clients through compelling visuals
 								that do most of the marketing for you.
 							</p>
 						</div>
 						<div>
-							<a href="#">learn more</a>
+							<a href="#" class="grids-item-link">learn more</a>
 						</div>
 					</div>
 					<div class="grids-item">
@@ -79,17 +87,17 @@
 					</div>
 					<div class="grids-item">
 						<div>
-							<h1>Stand out to the right audience</h1>
+							<h1 class="grids-item-title">Stand out to the right audience</h1>
 						</div>
 						<div>
-							<p>
+							<p class="grids-item-content">
 								Using a collaborative formula of designers, researchers,
 								photographers, videographers, and copywrites, we'll build and
 								extend your brand in digital places.
 							</p>
 						</div>
 						<div>
-							<a href="#">learn more</a>
+							<a href="#" class="grids-item-link">learn more</a>
 						</div>
 					</div>
 					<div class="grids-item">

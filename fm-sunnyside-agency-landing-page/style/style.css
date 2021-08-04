@@ -1,3 +1,4 @@
+@import url("./normalize.css");
 :root {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,9 +9,63 @@
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: "Barlow", "Fraunces", sans-serif, serif;
+  font-size: 18px;
+}
+
+.entry {
+  background: center/cover no-repeat url("../images/mobile/image-header.jpg");
+  text-align: center;
+}
+
+.entry .header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 35px 24px;
+}
+
+.entry .header-wrapper .header-menu > ul {
+  display: none;
+}
+
+.entry .entry-title-wrapper {
+  margin-top: 50px;
+  line-height: 1.35;
+}
+
+.entry .entry-title-wrapper .entry-title {
+  letter-spacing: 10px;
+  margin: 0;
+  font-family: "Fraunces";
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+}
+
+.entry .arrow-down-wrapper {
+  padding: 48px 0 130px;
+}
+
+.grids {
+  text-align: center;
+}
+
+.grids .grids-item img {
+  display: block;
+  width: 100%;
+}
+
+.grids .grids-item .grids-item-title {
+  font-family: "Fraunces";
+  color: #23303e;
 }
 /*# sourceMappingURL=style.css.map */
