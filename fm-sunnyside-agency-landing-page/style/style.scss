@@ -71,9 +71,47 @@ body {
 		display: flex;
 		justify-content: space-between;
 		padding: 35px 24px;
-		.header-menu > ul {
-			display: none;
+	}
+	.header-menu {
+		background-color: $color-entry-title;
+		color: $color-dark-gray-blue;
+		font-size: 1rem;
+		position: absolute;
+		top: 106px;
+		left: 1.222rem;
+		width: 87.5%;
+		margin: 0 auto;
+		padding: 2rem 4rem;
+		&::before {
+			content: " ";
+			display: block;
+			position: absolute;
+			right: 0;
+			top: -24px;
+			border-top: 12px solid transparent;
+			border-left: 12px solid transparent;
+			border-right: 12px solid white;
+			border-bottom: 12px solid white;
 		}
+		.header-menu-items {
+			margin: -10px 34px 0;
+			padding-bottom: 1rem;
+			.header-menu-item {
+				list-style: none;
+				padding: 1rem;
+				border-radius: 28px;
+				&:hover {
+					color: $color-des-blue;
+					background-color: $color-primary-yellow;
+					font-family: "Fraunces";
+					text-transform: uppercase;
+				}
+			}
+		}
+		display: none;
+	}
+	.is-open {
+		display: block;
 	}
 
 	.entry-title-wrapper {

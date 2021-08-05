@@ -35,18 +35,18 @@
 						<div class="header-logo">
 							<img src="./images/logo.svg" alt="website logo" />
 						</div>
-						<menu class="header-menu">
-							<a class="toggle-menu">
-								<img src="./images/icon-hamburger.svg" alt="" />
-							</a>
-							<ul>
-								<li class="header-menu-item">menu1</li>
-								<li class="header-menu-item">menu2</li>
-								<li class="header-menu-item">menu3</li>
-								<li class="header-menu-item">menu4</li>
-							</ul>
-						</menu>
+						<a class="menu-hamburger">
+							<img src="./images/icon-hamburger.svg" alt="" />
+						</a>
 					</div>
+					<menu class="header-menu">
+						<ul class="header-menu-items">
+							<li class="header-menu-item">About</li>
+							<li class="header-menu-item">Services</li>
+							<li class="header-menu-item">Projects</li>
+							<li class="header-menu-item">Contact</li>
+						</ul>
+					</menu>
 					<div class="entry-title-wrapper">
 						<h1 class="entry-title">we are creatives</h1>
 					</div>
@@ -231,4 +231,19 @@
 			</footer>
 		</div>
 	</body>
+	<script>
+		const hamburger = document.querySelector(".menu-hamburger");
+		const menu = document.querySelector(".header-menu");
+		const classLists = menu.classList;
+		hamburger.addEventListener("click", () => {
+			if (!classLists.contains("is-open")) {
+				classLists.add("is-open");
+			} else {
+				classLists.remove("is-open");
+			}
+		});
+		menu.addEventListener("mouseout", () => {
+			classLists.remove("is-open");
+		});
+	</script>
 </html>
