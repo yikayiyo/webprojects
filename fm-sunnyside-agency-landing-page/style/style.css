@@ -2,6 +2,7 @@
 :root {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 18px;
 }
 
 *,
@@ -15,7 +16,6 @@
 
 body {
   font-family: "Barlow", "Fraunces", sans-serif, serif;
-  font-size: 18px;
 }
 
 .entry {
@@ -68,7 +68,7 @@ body {
   margin: 0;
   font-family: "Fraunces";
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.778rem;
   line-height: 1.233;
   color: #23303e;
 }
@@ -80,14 +80,14 @@ body {
 }
 
 .grids .grids-item .grids-item-link-wrapper {
-  margin-top: 2rem;
+  margin-top: 1.778rem;
 }
 
 .grids .grids-item .grids-item-link-wrapper .grids-item-link {
   color: #23303e;
   text-transform: uppercase;
   font-family: "Fraunces";
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   position: relative;
   text-decoration: none;
   letter-spacing: 3px;
@@ -122,7 +122,7 @@ body {
 }
 
 .grids .intro {
-  padding: 64px 18px;
+  padding: 64px 24px;
 }
 
 .grids .graphic-design-container {
@@ -137,14 +137,14 @@ body {
 
 .grids .graphic-design-container .graphic-design-title-wrapper .graphic-design-title {
   font-family: "Fraunces";
-  font-size: 1.567rem;
+  font-size: 1.4rem;
   font-weight: 900;
 }
 
 .grids .graphic-design-container .graphic-design-content-wrapper {
   line-height: 1.667;
-  font-size: 16px;
-  margin-top: 2rem;
+  font-size: 0.889rem;
+  margin-top: 1.778rem;
 }
 
 .grids .photo-graphy-container {
@@ -159,13 +159,51 @@ body {
 
 .grids .photo-graphy-container .photo-graphy-title-wrapper .photo-graphy-title {
   font-family: "Fraunces";
-  font-size: 1.567rem;
+  font-size: 1.4rem;
   font-weight: 900;
 }
 
 .grids .photo-graphy-container .photo-graphy-content-wrapper {
   line-height: 1.667;
-  font-size: 16px;
-  margin-top: 2rem;
+  font-size: 0.889rem;
+  margin-top: 1.778rem;
+}
+
+.clients {
+  text-align: center;
+  padding: 54px 24px 78px;
+}
+
+.clients .clients-header {
+  font-family: "Fraunces";
+  font-size: 0.444rem;
+  color: #a7abae;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.clients .client .client-avatar {
+  width: 4rem;
+  border-radius: 50%;
+  margin-top: 54px;
+}
+
+.clients .client .client-words {
+  margin-top: 30px;
+  color: #818498;
+  line-height: 1.75;
+}
+
+.clients .client .client-name {
+  margin-top: 36px;
+  font-family: "Fraunces";
+  color: #23303e;
+  font-weight: 900;
+}
+
+.clients .client .client-job {
+  padding: 14px 0;
+  color: #a7abae;
+  font-size: 0.8rem;
 }
 /*# sourceMappingURL=style.css.map */

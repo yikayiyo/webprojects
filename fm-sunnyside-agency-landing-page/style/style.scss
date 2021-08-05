@@ -49,6 +49,7 @@ $color-entry-title: hsl(0, 0%, 100%);
 // ----------------------------------------
 :root {
 	box-sizing: border-box;
+	font-size: $font-size;
 }
 
 *,
@@ -61,7 +62,6 @@ $color-entry-title: hsl(0, 0%, 100%);
 
 body {
 	font-family: $font-family;
-	font-size: $font-size;
 }
 // height 538px
 .entry {
@@ -105,7 +105,7 @@ body {
 			margin: 0;
 			font-family: "Fraunces";
 			font-weight: 900;
-			font-size: 2rem;
+			font-size: 1.778rem;
 			line-height: 1.233;
 			color: $color-des-blue;
 		}
@@ -115,12 +115,12 @@ body {
 			line-height: 1.667;
 		}
 		.grids-item-link-wrapper {
-			margin-top: 2rem;
+			margin-top: 1.778rem;
 			.grids-item-link {
 				color: $color-des-blue;
 				text-transform: uppercase;
 				font-family: "Fraunces";
-				font-size: 0.9rem;
+				font-size: 0.8rem;
 				position: relative;
 				text-decoration: none;
 				letter-spacing: 3px;
@@ -130,7 +130,7 @@ body {
 		}
 	}
 	.intro {
-		padding: 64px 18px;
+		padding: 64px 24px;
 	}
 
 	.graphic-design-container {
@@ -142,14 +142,14 @@ body {
 			margin-top: 340px;
 			.graphic-design-title {
 				font-family: "Fraunces";
-				font-size: 1.567rem;
+				font-size: 1.4rem;
 				font-weight: 900;
 			}
 		}
 		.graphic-design-content-wrapper {
 			line-height: 1.667;
-			font-size: 16px;
-			margin-top: 2rem;
+			font-size: 0.889rem;
+			margin-top: 1.778rem;
 		}
 	}
 
@@ -162,14 +162,52 @@ body {
 			margin-top: 340px;
 			.photo-graphy-title {
 				font-family: "Fraunces";
-				font-size: 1.567rem;
+				font-size: 1.4rem;
 				font-weight: 900;
 			}
 		}
 		.photo-graphy-content-wrapper {
 			line-height: 1.667;
-			font-size: 16px;
-			margin-top: 2rem;
+			font-size: 0.889rem;
+			margin-top: 1.778rem;
+		}
+	}
+}
+
+.clients {
+	text-align: center;
+	padding: 54px 24px 78px;
+	.clients-header {
+		font-family: "Fraunces";
+		font-size: 0.444rem;
+		color: $color-gray-blue;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+	}
+	.client {
+		.client-avatar {
+			width: 4rem;
+			border-radius: 50%;
+			margin-top: 54px;
+		}
+
+		.client-words {
+			margin-top: 30px;
+			color: $color-dark-gray-blue;
+			line-height: 1.75;
+		}
+
+		.client-name {
+			margin-top: 36px;
+			font-family: "Fraunces";
+			color: $color-des-blue;
+			font-weight: 900;
+		}
+
+		.client-job {
+			padding: 14px 0;
+			color: hsl(210, 4%, 67%);
+			font-size: 0.8rem;
 		}
 	}
 }
