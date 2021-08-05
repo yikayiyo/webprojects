@@ -206,4 +206,64 @@ body {
   color: #a7abae;
   font-size: 0.8rem;
 }
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery .gallery-item img {
+  display: block;
+  width: 100%;
+}
+
+.footer {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: bottom center url("../images/mobile/image-graphic-design.jpg");
+}
+
+.footer .footer-logo {
+  margin-top: 1rem;
+}
+
+.footer .footer-logo img {
+  width: 170px;
+}
+
+.footer .page-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.35rem;
+}
+
+.footer .page-links a {
+  color: #458c7e;
+  text-decoration: none;
+}
+
+.footer .social-medias {
+  width: 80%;
+  margin: 5rem auto 1.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.attribution {
+  padding: 1rem;
+  background-color: #b9dad3;
+}
 /*# sourceMappingURL=style.css.map */

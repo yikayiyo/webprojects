@@ -211,3 +211,47 @@ body {
 		}
 	}
 }
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	.gallery-item {
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.footer {
+	padding: 2.5rem 2rem;
+	text-align: center;
+	background: bottom center url("../images/mobile/image-graphic-design.jpg");
+	.footer-logo {
+		margin-top: 1rem;
+		img {
+			width: 170px;
+		}
+	}
+	.page-links {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 2.35rem;
+		a {
+			color: $color-primary-footer;
+			text-decoration: none;
+		}
+	}
+	.social-medias {
+		width: 80%;
+		margin: 5rem auto 1.75rem;
+		display: flex;
+		justify-content: space-evenly;
+	}
+}
+
+.attribution {
+	padding: 1rem;
+	background-color: hsl(168, 31%, 79%);
+}
