@@ -59,13 +59,13 @@ body {
 }
 
 .entry .header-menu .header-menu-items {
-  margin: -10px 34px 0;
+  margin: -10px 0 0;
   padding-bottom: 1rem;
 }
 
 .entry .header-menu .header-menu-items .header-menu-item {
   list-style: none;
-  padding: 1rem;
+  padding: 1rem 1.2rem;
   border-radius: 28px;
 }
 
