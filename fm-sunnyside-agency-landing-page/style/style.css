@@ -69,11 +69,19 @@ body {
   border-radius: 28px;
 }
 
+.entry .header-menu .header-menu-items .header-menu-item a {
+  color: #818498;
+  text-decoration: none;
+}
+
 .entry .header-menu .header-menu-items .header-menu-item:hover {
-  color: #23303e;
   background-color: #fad400;
   font-family: "Fraunces";
   text-transform: uppercase;
+}
+
+.entry .header-menu .header-menu-items .header-menu-item:hover a {
+  color: #23303e;
 }
 
 .entry .is-open {
@@ -341,16 +349,21 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    color: white;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .entry .header-wrapper .header-menu .header-menu-items .header-menu-item {
-    padding: 1rem 2.138rem;
+    padding: 1rem 1.889rem;
+  }
+  .entry .header-wrapper .header-menu .header-menu-items .header-menu-item a {
+    color: white;
   }
   .entry .header-wrapper .header-menu .header-menu-items .header-menu-item:hover {
     background-color: white;
+  }
+  .entry .header-wrapper .header-menu .header-menu-items .header-menu-item:hover a {
+    color: #23303e;
   }
   .entry .entry-title-wrapper {
     font-size: 1.5rem;
@@ -445,6 +458,39 @@ body {
   }
   .clients .client-wrapper .client .client-words {
     margin-top: 3rem;
+  }
+  .gallery {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 24.833rem;
+        grid-template-rows: 24.833rem;
+  }
+  .gallery .gallery-item > img {
+    display: none;
+  }
+  .gallery .one {
+    background-size: contain;
+    background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+  }
+  .gallery .two {
+    background-size: contain;
+    background-image: url("../images/desktop/image-gallery-orange.jpg");
+  }
+  .gallery .three {
+    background-size: contain;
+    background-image: url("../images/desktop/image-gallery-cone.jpg");
+  }
+  .gallery .four {
+    background-size: contain;
+    background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+  }
+  .footer {
+    padding-left: 31.778rem;
+    padding-right: 31.778rem;
+    background-size: cover;
+  }
+  .footer .page-link a:hover {
+    color: #a7abae;
   }
 }
 /*# sourceMappingURL=style.css.map */

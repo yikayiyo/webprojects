@@ -63,6 +63,7 @@ $color-entry-title: hsl(0, 0%, 100%);
 body {
 	font-family: $font-family;
 }
+
 // ---------- mobile version ----------
 .entry {
 	background: center / cover no-repeat url("../images/mobile/image-header.jpg");
@@ -98,10 +99,16 @@ body {
 			padding-bottom: 1rem;
 			.header-menu-item {
 				list-style: none;
+				a {
+					color: $color-dark-gray-blue;
+					text-decoration: none;
+				}
 				padding: 1rem 1.2rem;
 				border-radius: 28px;
 				&:hover {
-					color: $color-des-blue;
+					a {
+						color: $color-des-blue;
+					}
 					background-color: $color-primary-yellow;
 					font-family: "Fraunces";
 					text-transform: uppercase;
@@ -321,12 +328,18 @@ body {
 					margin: 0;
 					padding: 0;
 					display: flex;
-					align-items: center;
-					color: $color-entry-title;
+					justify-content: space-between;
+
 					.header-menu-item {
-						padding: 1rem 2.138rem;
+						padding: 1rem 1.889rem;
+						a {
+							color: $color-entry-title;
+						}
 						&:hover {
 							background-color: $color-entry-title;
+							a {
+								color: $color-des-blue;
+							}
 						}
 					}
 				}
@@ -415,6 +428,41 @@ body {
 				.client-words {
 					margin-top: 3rem;
 				}
+			}
+		}
+	}
+
+	.gallery {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 24.833rem;
+		.gallery-item > img {
+			display: none;
+		}
+		.one {
+			background-size: contain;
+			background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+		}
+		.two {
+			background-size: contain;
+			background-image: url("../images/desktop/image-gallery-orange.jpg");
+		}
+		.three {
+			background-size: contain;
+			background-image: url("../images/desktop/image-gallery-cone.jpg");
+		}
+		.four {
+			background-size: contain;
+			background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+		}
+	}
+
+	.footer {
+		padding-left: 31.778rem;
+		padding-right: 31.778rem;
+		background-size: cover;
+		.page-link {
+			a:hover {
+				color: $color-gray-blue;
 			}
 		}
 	}
