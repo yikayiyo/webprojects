@@ -63,7 +63,7 @@ $color-entry-title: hsl(0, 0%, 100%);
 body {
 	font-family: $font-family;
 }
-// height 538px
+// ---------- mobile version ----------
 .entry {
 	background: center / cover no-repeat url("../images/mobile/image-header.jpg");
 	text-align: center;
@@ -292,4 +292,50 @@ body {
 .attribution {
 	padding: 1rem;
 	background-color: hsl(168, 31%, 79%);
+}
+
+// ---------- desktop version ----------
+@media screen and (min-width: 1440px) {
+	.entry {
+		background: center/cover no-repeat url("../images/desktop/image-header.jpg");
+		.header-wrapper {
+			align-items: center;
+			padding: 2rem;
+			.menu-hamburger {
+				display: none;
+			}
+			.header-menu {
+				display: block;
+				background-color: initial;
+				position: initial;
+				width: initial;
+				margin: 0;
+				padding: 0;
+				&::before {
+					display: none;
+					content: "";
+				}
+				.header-menu-items {
+					margin: 0;
+					padding: 0;
+					display: flex;
+					align-items: center;
+					color: $color-entry-title;
+					.header-menu-item {
+						padding: 1rem 2.138rem;
+						&:hover {
+							background-color: $color-entry-title;
+						}
+					}
+				}
+			}
+		}
+		.entry-title-wrapper {
+			font-size: 1.5rem;
+			margin-top: 4rem;
+		}
+		.arrow-down-wrapper {
+			padding: 5rem 0 18rem 0;
+		}
+	}
 }

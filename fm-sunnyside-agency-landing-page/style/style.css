@@ -309,4 +309,55 @@ body {
   padding: 1rem;
   background-color: #b9dad3;
 }
+
+@media screen and (min-width: 1440px) {
+  .entry {
+    background: center/cover no-repeat url("../images/desktop/image-header.jpg");
+  }
+  .entry .header-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2rem;
+  }
+  .entry .header-wrapper .menu-hamburger {
+    display: none;
+  }
+  .entry .header-wrapper .header-menu {
+    display: block;
+    background-color: initial;
+    position: initial;
+    width: initial;
+    margin: 0;
+    padding: 0;
+  }
+  .entry .header-wrapper .header-menu::before {
+    display: none;
+    content: "";
+  }
+  .entry .header-wrapper .header-menu .header-menu-items {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+  }
+  .entry .header-wrapper .header-menu .header-menu-items .header-menu-item {
+    padding: 1rem 2.138rem;
+  }
+  .entry .header-wrapper .header-menu .header-menu-items .header-menu-item:hover {
+    background-color: white;
+  }
+  .entry .entry-title-wrapper {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+  }
+  .entry .arrow-down-wrapper {
+    padding: 5rem 0 18rem 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
