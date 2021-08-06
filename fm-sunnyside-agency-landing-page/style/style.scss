@@ -222,30 +222,32 @@ body {
 		text-transform: uppercase;
 		letter-spacing: 5px;
 	}
-	.client {
-		.client-avatar {
-			width: 4rem;
-			border-radius: 50%;
-			margin-top: 54px;
-		}
+	.client-wrapper {
+		.client {
+			.client-avatar {
+				width: 4rem;
+				border-radius: 50%;
+				margin-top: 54px;
+			}
 
-		.client-words {
-			margin-top: 30px;
-			color: $color-dark-gray-blue;
-			line-height: 1.75;
-		}
+			.client-words {
+				margin-top: 30px;
+				color: $color-dark-gray-blue;
+				line-height: 1.75;
+			}
 
-		.client-name {
-			margin-top: 36px;
-			font-family: "Fraunces";
-			color: $color-des-blue;
-			font-weight: 900;
-		}
+			.client-name {
+				margin-top: 36px;
+				font-family: "Fraunces";
+				color: $color-des-blue;
+				font-weight: 900;
+			}
 
-		.client-job {
-			padding: 14px 0;
-			color: hsl(210, 4%, 67%);
-			font-size: 0.8rem;
+			.client-job {
+				padding: 14px 0;
+				color: hsl(210, 4%, 67%);
+				font-size: 0.8rem;
+			}
 		}
 	}
 }
@@ -336,6 +338,84 @@ body {
 		}
 		.arrow-down-wrapper {
 			padding: 5rem 0 18rem 0;
+		}
+	}
+
+	.grids {
+		display: grid;
+		text-align: left;
+		grid-template-columns: repeat(2, 1fr);
+		.grids-item-transform-image {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+		.grids-item-transform-wrapper {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			padding: 9rem 6rem 9rem 9rem;
+			.grids-item-title {
+				font-size: 2.25rem;
+			}
+		}
+
+		.grids-item-standout-wrapper {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			padding: 9rem 9rem 9rem 6rem;
+			.grids-item-title {
+				font-size: 2.25rem;
+			}
+		}
+		.grids-item-link-wrapper {
+			position: relative;
+		}
+		.grids-item-link {
+			position: absolute;
+			left: 10px;
+		}
+		.graphic-design-container,
+		.photo-graphy-container {
+			text-align: center;
+			background-position: center;
+			background-size: cover;
+		}
+		.graphic-design-container {
+			background-image: url("../images/desktop/image-graphic-design.jpg");
+			.graphic-design-content-wrapper {
+				width: 50%;
+				margin: 2rem auto 0;
+			}
+		}
+		.photo-graphy-container {
+			background-image: url("../images/desktop/image-photography.jpg");
+			.photo-graphy-content-wrapper {
+				width: 50%;
+				margin: 2rem auto 0;
+			}
+		}
+	}
+
+	.clients {
+		padding: 9rem;
+		margin: 0;
+		.client-wrapper {
+			display: flex;
+			.client {
+				flex: 1;
+				padding: 0 0.5rem;
+				.client-name {
+					margin-top: 4rem;
+				}
+				.client-words {
+					margin-top: 3rem;
+				}
+			}
 		}
 	}
 }

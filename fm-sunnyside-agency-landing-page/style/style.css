@@ -225,26 +225,26 @@ body {
   letter-spacing: 5px;
 }
 
-.clients .client .client-avatar {
+.clients .client-wrapper .client .client-avatar {
   width: 4rem;
   border-radius: 50%;
   margin-top: 54px;
 }
 
-.clients .client .client-words {
+.clients .client-wrapper .client .client-words {
   margin-top: 30px;
   color: #818498;
   line-height: 1.75;
 }
 
-.clients .client .client-name {
+.clients .client-wrapper .client .client-name {
   margin-top: 36px;
   font-family: "Fraunces";
   color: #23303e;
   font-weight: 900;
 }
 
-.clients .client .client-job {
+.clients .client-wrapper .client .client-job {
   padding: 14px 0;
   color: #a7abae;
   font-size: 0.8rem;
@@ -358,6 +358,93 @@ body {
   }
   .entry .arrow-down-wrapper {
     padding: 5rem 0 18rem 0;
+  }
+  .grids {
+    display: -ms-grid;
+    display: grid;
+    text-align: left;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .grids .grids-item-transform-image {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 3;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .grids .grids-item-transform-wrapper {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 9rem 6rem 9rem 9rem;
+  }
+  .grids .grids-item-transform-wrapper .grids-item-title {
+    font-size: 2.25rem;
+  }
+  .grids .grids-item-standout-wrapper {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 3;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 9rem 9rem 9rem 6rem;
+  }
+  .grids .grids-item-standout-wrapper .grids-item-title {
+    font-size: 2.25rem;
+  }
+  .grids .grids-item-link-wrapper {
+    position: relative;
+  }
+  .grids .grids-item-link {
+    position: absolute;
+    left: 10px;
+  }
+  .grids .graphic-design-container,
+  .grids .photo-graphy-container {
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+  }
+  .grids .graphic-design-container {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+  }
+  .grids .graphic-design-container .graphic-design-content-wrapper {
+    width: 50%;
+    margin: 2rem auto 0;
+  }
+  .grids .photo-graphy-container {
+    background-image: url("../images/desktop/image-photography.jpg");
+  }
+  .grids .photo-graphy-container .photo-graphy-content-wrapper {
+    width: 50%;
+    margin: 2rem auto 0;
+  }
+  .clients {
+    padding: 9rem;
+    margin: 0;
+  }
+  .clients .client-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .clients .client-wrapper .client {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0 0.5rem;
+  }
+  .clients .client-wrapper .client .client-name {
+    margin-top: 4rem;
+  }
+  .clients .client-wrapper .client .client-words {
+    margin-top: 3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
