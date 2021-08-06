@@ -37,10 +37,40 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
+- CSS Flex
 - CSS Grid
 - Mobile-first workflow
 
 ### What I learned
+
+- Use `::before` and `border` to draw a triangle
+
+  ```css
+  border-top: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-right: 12px solid white;
+  border-bottom: 12px solid white;
+  ```
+
+- Fix `onmouseout` bug
+
+  #### what I want
+
+  When I click the hamburger icon, the menu should show up. And when my pointer move into the menu items, it should show a hover effect. The menu should disappear only when my pointer move out the menu.
+
+  #### what I did
+
+  I added a `onmouseout` event on my menu element, but when my pointer move into its children the menu disappear which is not my favor.
+
+  #### fix bug
+
+  replace `onmouseout` with `mouseleave`
+
+  #### `onmouseout` vs `onmouseleave`
+
+  ```
+  `mouseleave` and `mouseout` are similar but differ in that `mouseleave` does not bubble and `mouseout` does.
+  ```
 
 ## Author
 

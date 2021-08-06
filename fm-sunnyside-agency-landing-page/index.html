@@ -242,8 +242,11 @@
 				classLists.remove("is-open");
 			}
 		});
-		menu.addEventListener("mouseout", () => {
-			classLists.remove("is-open");
+
+		menu.addEventListener("mouseleave", () => {
+			if (classLists.contains("is-open")) {
+				classLists.remove("is-open");
+			}
 		});
 	</script>
 </html>
