@@ -1,0 +1,123 @@
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Red Hat Text", sans-serif, serif;
+  font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.container {
+  padding: 2rem 1rem 13rem 1rem;
+  text-align: center;
+  background-color: #1e1f29;
+  background-image: url("../images/bg-stars.svg");
+}
+
+.container h1 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  color: white;
+  margin-top: 5rem;
+  padding: 3rem 0;
+}
+
+.container .timer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .timer-wrapper .card-wrapper {
+  position: relative;
+}
+
+.container .timer-wrapper .card-wrapper:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #1e1f29;
+  position: absolute;
+  top: 35px;
+}
+
+.container .timer-wrapper .card-value {
+  padding: 1.25rem 1rem;
+  font-size: 2.5rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 8px 0px 0px #191a24;
+          box-shadow: 0px 8px 0px 0px #191a24;
+  color: #fb6087;
+  background-color: #343650;
+}
+
+.container .timer-wrapper .card-value::before {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #1e1f29;
+  position: absolute;
+  top: 32px;
+  left: -3px;
+}
+
+.container .timer-wrapper .card-value::after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #1e1f29;
+  position: absolute;
+  top: 32px;
+  right: -3px;
+}
+
+.container .timer-wrapper .card-key {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  color: #8486a9;
+  letter-spacing: 3px;
+}
+
+.container .timer-wrapper .card-key p {
+  font-size: 5px;
+}
+
+.footer-wrapper {
+  background-position: right;
+  background-size: cover;
+  background-color: #1e1f29;
+  background-repeat: no-repeat;
+  background-image: url("../images/pattern-hills.svg");
+  padding: 3rem 8rem;
+}
+
+.footer-wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 3rem;
+}
+
+.footer-wrapper ul .fab {
+  font-size: 1.75rem;
+  color: #8486a9;
+}
+/*# sourceMappingURL=style.css.map */
