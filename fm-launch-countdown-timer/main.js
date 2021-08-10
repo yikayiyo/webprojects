@@ -1,3 +1,14 @@
+/*
+seconds倒数
+秒变化时，给秒的card添加动画
+分变化时，给分的card添加动画
+
+动画定义为
+.flip
+
+
+
+*/
 const App = {
 	data() {
 		return {
@@ -18,20 +29,32 @@ const App = {
   `,
 	computed: {
 		day() {
-			return Math.floor(this.seconds / (24 * 3600));
+			const day = Math.floor(this.seconds / (24 * 3600));
+			return day < 10 ? "0" + day : day;
 		},
 		hour() {
-			return Math.floor((this.seconds % (24 * 3600)) / 3600);
+			const hour = Math.floor((this.seconds % (24 * 3600)) / 3600);
+			return hour < 10 ? "0" + hour : hour;
 		},
 		minute() {
-			return Math.floor(((this.seconds % (24 * 3600)) % 3600) / 60);
+			const minute = Math.floor(((this.seconds % (24 * 3600)) % 3600) / 60);
+			return minute < 10 ? "0" + minute : minute;
 		},
 		second() {
-			return Math.floor((this.seconds % (24 * 3600)) % 3600) % 60;
+			this.isFlip = true;
+			const second = Math.floor((this.seconds % (24 * 3600)) % 3600) % 60;
+			return second < 10 ? "0" + second : second;
+		},
+	},
+	watch: {
+		seconds() {
+			if (this.seconds === 0) {
+				clearInterval(this.timer);
+			}
 		},
 	},
 	created() {
-		setInterval(() => {
+		this.timer = setInterval(() => {
 			this.seconds--;
 		}, 1000);
 	},
@@ -39,13 +62,27 @@ const App = {
 
 const app = Vue.createApp(App);
 app.component("card", {
+	data() {
+		return {
+			isFlip: false,
+		};
+	},
 	template: `
     <div class="card-wrapper">
-      <div class="card-value"><p>{{ timerValue }}</p></div>
+      <div class="card-value" :class="{'flip': isFlip}"><p>{{ timerValue }}</p></div>
       <div class="card-key"><p>{{ timerKey}}</p></div>
     </div>
   `,
 	props: ["timerValue", "timerKey"],
+	watch: {
+		timerValue() {
+			console.log("timerValue changed");
+			this.isFlip = true;
+			setTimeout(() => {
+				this.isFlip = !this.isFlip;
+			}, 200);
+		},
+	},
 });
 
 app.component("social-footer", {

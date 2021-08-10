@@ -86,6 +86,13 @@
   right: -3px;
 }
 
+.container .timer-wrapper .flip {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
 .container .timer-wrapper .card-key {
   margin-top: 1rem;
   text-transform: uppercase;
