@@ -24,8 +24,8 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: '.section-3',
-      start: 'top center',  // 元素顶部 视图中部
-      end: 'top 200px',  // 元素顶部 距离视图顶部200px
+      start: 'top center', // 元素顶部 视图中部
+      end: 'top 200px', // 元素顶部 距离视图顶部200px
       scrub: 1,
       markers: true
     }
@@ -42,10 +42,14 @@ gsap
     },
     0
   )
-  .to('.section-3__title', {
-    color: 'white',
-    ease: 'power2.inOut'
-  }, 0)
+  .to(
+    '.section-3__title',
+    {
+      color: 'white',
+      ease: 'power2.inOut'
+    },
+    0
+  )
 
 // svg seperator
 const paths = [...document.querySelectorAll('path.path-anim')]
@@ -69,19 +73,18 @@ paths.forEach((el) => {
 })
 
 // svg image
-// todo: improve
 const images = [...document.querySelectorAll('img.path-anim')]
 images.forEach((el) => {
   gsap
     .timeline({
       scrollTrigger: {
         trigger: el,
-        start: 'top center',
+        start: 'top center'
       }
     })
     .fromTo(
       el,
       { clipPath: 'circle(0% at 50% 50%)' },
-      { clipPath: 'circle(80% at 50% 50%)', duration: 2 }
-    );
+      { clipPath: 'circle(80% at 50% 50%)', duration: 1 }
+    )
 })
