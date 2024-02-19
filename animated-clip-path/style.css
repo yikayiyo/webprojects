@@ -203,13 +203,13 @@ img {
   background: white;
   overflow: hidden;
   clip-path: polygon(37.5% 20%, 62.5% 20%, 62.5% 80%, 37.5% 80%);
+  display: grid;
+  place-items: center;
 }
 
 .image-holder img {
-  position: absolute;
-  inset: 0;
+  max-width: 320px;
   object-fit: cover;
-  transform: scale(2);
 }
 
 .text-and-image {

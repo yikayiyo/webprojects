@@ -24,8 +24,8 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: '.section-3',
-      start: 'top center', // 元素顶部 视图中部
-      end: 'top 200px', // 元素顶部 距离视图顶部200px
+      start: 'top 250px', // 元素顶部 距离视图顶部50px
+      end: 'top 50px', // 元素顶部 视图顶部
       scrub: 1,
       markers: true
     }
@@ -37,7 +37,7 @@ gsap
   .to(
     '.image-holder img',
     {
-      scale: 1,
+      scale: 2,
       ease: 'power2.inOut'
     },
     0
@@ -45,7 +45,7 @@ gsap
   .to(
     '.section-3__title',
     {
-      color: 'white',
+      color: '#b48d6e',
       ease: 'power2.inOut'
     },
     0
@@ -79,7 +79,9 @@ images.forEach((el) => {
     .timeline({
       scrollTrigger: {
         trigger: el,
-        start: 'top center'
+        start: 'top center',
+        end: '+=150',
+        scrub: 1,
       }
     })
     .fromTo(
