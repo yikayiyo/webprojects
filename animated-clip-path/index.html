@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Animated-clip-path</title>
+</head>
+
+<body>
+  <section class="content content--centered section-1">
+    <div class="content__title"> <span class="content__title-pre content__title-pre--offset">Animated</span>
+      <h2 class="content__title-main">SVG Shapes</h2>
+    </div>
+    <div class="content__scroll">
+      <span>
+        Scroll to see more
+      </span>
+      <svg class="i-scroll-down" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+        fill="#000000">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <title>arrow-down-circle</title>
+          <defs> </defs>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+            <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-412.000000, -1087.000000)" fill="#000000">
+              <path
+                d="M428,1117 C420.268,1117 414,1110.73 414,1103 C414,1095.27 420.268,1089 428,1089 C435.732,1089 442,1095.27 442,1103 C442,1110.73 435.732,1117 428,1117 L428,1117 Z M428,1087 C419.163,1087 412,1094.16 412,1103 C412,1111.84 419.163,1119 428,1119 C436.837,1119 444,1111.84 444,1103 C444,1094.16 436.837,1087 428,1087 L428,1087 Z M433.121,1102.46 L429,1106.59 L429,1096 C429,1095.45 428.553,1095 428,1095 C427.448,1095 427,1095.45 427,1096 L427,1106.59 L422.879,1102.46 C422.488,1102.07 421.855,1102.07 421.465,1102.46 C421.074,1102.86 421.074,1103.49 421.465,1103.88 L427.121,1109.54 C427.361,1109.78 427.689,1109.85 428,1109.79 C428.311,1109.85 428.639,1109.78 428.879,1109.54 L434.535,1103.88 C434.926,1103.49 434.926,1102.86 434.535,1102.46 C434.146,1102.07 433.512,1102.07 433.121,1102.46 L433.121,1102.46 Z"
+                id="arrow-down-circle" sketch:type="MSShapeGroup"> </path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+  <svg class="separator separator--up" width="100%" height="100%" viewBox="0 0 100 10" preserveAspectRatio="none">
+    <path class="separator__path path-anim" d="M 0 0 C 40 0 60 0 100 0 L 0 0 Z"
+      data-path-to="M 0 0 C 40 10 60 10 100 0 L 0 0 Z" vector-effect="non-scaling-stroke" />
+  </svg>
+  <section class="content content--centered section-2">
+    <div class="section-2__title"> <span class="content__title-pre content__title-pre--offset">Love</span>
+      <h2 class="content__title-main">& Peace</h2>
+    </div>
+  </section>
+  <section class="content section-3">
+    <div class="section-3__title"> <span class="">Love</span>
+      <h2 class="">& Peace</h2>
+    </div>
+    <div class="image-holder">
+      <img
+        src="https://images.unsplash.com/photo-1707850975372-f0e6c12274e4?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDgzMzM1NDR8&ixlib=rb-4.0.3&q=85"
+        alt="">
+    </div>
+  </section>
+  <section class="content section-4">
+    <svg viewBox="0 0 10 10" width="100%" height="100%" class="svg-4 be-happy">
+      <path class="path-anim" data-path-to="M 2 5 C 2 7 8 7 8 5 M 2 2 C 3 2 4 2 4 2 M 5 2 L 7 2"
+        d="M 2 5 C 2 5 8 5 8 5 M 2 2 C 3 2 4 2 4 2 M 5 2 L 7 2" />
+    </svg>
+  </section>
+  <section class="content content--centered section-5">
+    <div class="text-and-image">
+      <p class="sec-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique purus vel erat tristique ultrices.
+      </p>
+      <div class="sec-image">
+        <img class="path-anim" data-path-to="clip-path: circle(150% at 50% 50%);"
+          src="https://images.unsplash.com/photo-1706211307284-889793e9fdc4?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDgzMzExOTZ8&ixlib=rb-4.0.3&q=85"
+          alt="">
+      </div>
+    </div>
+  </section>
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/ScrollTrigger.min.js"></script>
+  <script src="./js/lenis.min.js"></script> 
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
