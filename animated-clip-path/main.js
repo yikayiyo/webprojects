@@ -16,7 +16,6 @@ gsap.to('.section-2__title', {
     end: '+=500',
     scrub: 1
   },
-  marker: true
 })
 
 // section-3
@@ -27,7 +26,6 @@ gsap
       start: 'top 250px', // 元素顶部 距离视图顶部50px
       end: 'top 50px', // 元素顶部 视图顶部
       scrub: 1,
-      markers: true
     }
   })
   .to('.image-holder', {
@@ -61,14 +59,14 @@ paths.forEach((el) => {
     .timeline({
       scrollTrigger: {
         trigger: svgEl,
-        start: 'top bottom',
-        end: 'bottom top',
+        start: 'top 50%',
+        end: 'top 10%',
         scrub: true
       }
     })
     .to(el, {
       ease: 'none',
-      attr: { d: pathTo }
+      attr: { d: pathTo },
     })
 })
 
@@ -90,3 +88,18 @@ images.forEach((el) => {
       { clipPath: 'circle(80% at 50% 50%)', duration: 1 }
     )
 })
+
+// footer
+gsap.timeline({
+  scrollTrigger: {
+    trigger: 'section:last-of-type',
+    start: 'top center',
+    end: '+=150',
+    scrub: 1,
+  }
+})
+.to(
+  'footer', {
+    opacity: 1,
+  }
+)
