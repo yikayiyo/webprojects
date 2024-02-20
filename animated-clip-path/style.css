@@ -206,11 +206,14 @@ img {
   clip-path: polygon(37.5% 20%, 62.5% 20%, 62.5% 80%, 37.5% 80%);
   display: grid;
   place-items: center;
+  transform: rotate(45deg);
 }
 
 .image-holder img {
   max-width: 320px;
   object-fit: cover;
+  transform: scale(.9);
+  filter: blur(10px);
 }
 
 .text-and-image {
@@ -262,7 +265,7 @@ img {
 }
 
 .section-8 {
-  background-color: #060a09;
+  background-color: #5fb5a0;
 }
 
 .content:last-of-type {
