@@ -1,6 +1,23 @@
 initAnimationPreset()
 preloadImages()
 
+// section-1
+const tl1 = gsap.timeline()
+tl1
+  .from('.content__scroll span', {
+    duration: 2,
+    text: {
+      value: ''
+    },
+    ease: 'none'
+  })
+  .to('.content__scroll span', {
+    scale: 1.2,
+    repeat: -1,
+    yoyo: true,
+    duration: 1
+  })
+
 // section-2 title
 gsap.to('.section-2__title', {
   scale: 1.2,
@@ -105,7 +122,6 @@ function preloadImages() {
     const imgwrap = document.createElement('div')
     imgwrap.style.visibility = 'hidden'
     body.appendChild(imgwrap)
-
     ;[...document.querySelectorAll('image')].forEach((el) => {
       const imgEl = document.createElement('img')
       imgEl.style.width = 0
@@ -128,6 +144,7 @@ function preloadImages() {
 
 function initAnimationPreset() {
   gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(TextPlugin)
   const lenis = new Lenis()
   lenis.on('scroll', ScrollTrigger.update)
   gsap.ticker.add((time) => {
