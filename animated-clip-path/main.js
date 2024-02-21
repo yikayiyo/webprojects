@@ -84,7 +84,7 @@ paths.forEach((el) => {
 })
 
 // svg image
-const images = [...document.querySelectorAll('img.path-anim')]
+const images = [...document.querySelectorAll('.text-and-image')]
 images.forEach((el) => {
   gsap
     .timeline({
@@ -96,17 +96,38 @@ images.forEach((el) => {
       }
     })
     .fromTo(
-      el,
+      el.querySelector('.path-anim'),
       { clipPath: 'circle(0% at 50% 50%)' },
-      { clipPath: 'circle(80% at 50% 50%)', duration: 1 }
+      { clipPath: 'circle(80% at 50% 50%)', scale: 0.95, duration: 1, ease: "circ.out", }
     )
+    .from(el.querySelector('.sec-text'), {
+      duration: 2,
+      text: {
+        value: ''
+      },
+      ease: 'none'
+    })
 })
+
+// imgs gallary
+let sections = gsap.utils.toArray(".content-img");
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".imgs-container",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    end: `+=${window.innerWidth * sections.length}`
+  }
+});
 
 // footer
 gsap
   .timeline({
     scrollTrigger: {
-      trigger: 'section:last-of-type',
+      trigger: '.last-section',
       start: 'top center',
       end: '+=150',
       scrub: 1
