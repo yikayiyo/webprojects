@@ -7,15 +7,15 @@ tl1
   .from('.content__scroll span', {
     duration: 2,
     text: {
-      value: ''
+      value: '',
     },
     ease: 'none'
   })
-  .to('.content__scroll span', {
-    scale: 1.2,
+  .to('.content__scroll', {
+    opacity: 0,
+    y: 10,
     repeat: -1,
-    yoyo: true,
-    duration: 1
+    duration: 1.5
   })
 
 // section-2 title
@@ -74,7 +74,8 @@ paths.forEach((el) => {
         trigger: svgEl,
         start: 'top 50%',
         end: 'top 10%',
-        scrub: true
+        scrub: true,
+        markers: true,
       }
     })
     .to(el, {
@@ -128,9 +129,8 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: '.last-section',
-      start: 'top center',
-      end: '+=150',
-      scrub: 1
+      end: '+=80',
+      scrub:1
     }
   })
   .to('footer', {
