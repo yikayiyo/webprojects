@@ -199,7 +199,7 @@ img {
 }
 
 .image-holder img {
-  max-width: 320px;
+  max-width: 80vmin;
   object-fit: cover;
   transform: scale(.9);
   filter: blur(10px);
