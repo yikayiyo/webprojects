@@ -1,0 +1,245 @@
+/*
+  reset.css from https://andy-bell.co.uk/a-modern-css-reset/
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+:root {
+  --bg-color: #fafafa;
+  --header-height: 64px;
+}
+
+body {
+  position: relative;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+.header_wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  min-height: var(--header-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  margin: auto;
+}
+
+.header__noBorder {
+  box-shadow: none;
+}
+
+.header_nav_first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_nav_first > div:first-of-type {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo-context-menu-button_button {
+  display: flex;
+  padding: 4px;
+  margin: -4px;
+  border-radius: 6px;
+}
+
+.header_nav_second {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1;
+  width: 100%;
+  background-color: transparent;
+  margin-left: 32px;
+}
+
+.navigation-menu_tabsHighlight {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  background: #ebebeb;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border-radius: 9999px;
+  transition: .25s ease;
+  transition-property: width,transform,opacity;
+}
+
+.navigation-menu_list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-menu_list > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-menu_trigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navigation-menu_link {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.navigation-menu_content {
+  position: absolute!important;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation-duration: .25s;
+  animation-timing-function: ease;
+}
+
+.navigation-menu_link, .navigation-menu_trigger {
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+  border-radius: 9999px;
+  background: transparent;
+  border: 0;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: .2s;
+  transition-timing-function: ease;
+}
+
+.footer {
+  position: fixed;
+  z-index: 100000;
+  inset: 0;
+  top: auto;
+  padding: 30px;
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content__link {
+  color: inherit;
+  text-decoration: inherit;
+  display: inline-block;
+  margin-left: 5px;
+}
