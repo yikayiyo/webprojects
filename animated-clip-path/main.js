@@ -19,16 +19,58 @@ tl1
   })
 
 // section-2 title
-gsap.to('.section-2__title', {
-  scale: 1.2,
-  ease: 'power2.inOut',
+// gsap.to('.section-2__title', {
+//   scale: 1.2,
+//   ease: 'power2.inOut',
+//   scrollTrigger: {
+//     trigger: '.section-2',
+//     start: 'top center',
+//     end: '+=500',
+//     scrub: 1
+//   }
+// })
+
+// effect 1
+// gsap.fromTo('.section-2__title', { 
+//   text: '',
+//   'will-change': 'opacity, transform', 
+//   opacity: 0, 
+//   scale: 0.6,
+//   rotationZ: () => gsap.utils.random(-20,20)
+// },
+// {
+//   ease: 'power4',
+//   opacity: 1,
+//   scale: 1,
+//   rotation: 0,
+//   stagger: 0.4,
+//   scrollTrigger: {
+//       trigger: '.section-2',
+//       start: 'center+=20% bottom',
+//       end: '+=50%',
+//       scrub: true
+//   },
+// });
+
+// effect 2
+gsap.fromTo('.section-2__title .char',  {
+  'will-change': 'transform', 
+  transformOrigin: '50% 0%', 
+  scaleY: 0
+},
+{
+  ease: 'back',
+  opacity: 1,
+  scaleY: 1,
+  yPercent: 0,
+  stagger: 0.03,
   scrollTrigger: {
-    trigger: '.section-2',
-    start: 'top center',
-    end: '+=500',
-    scrub: 1
+    trigger: '.section-2__title .char',
+      start: 'center bottom-=5%',
+      end: 'top top-=20%',
+      scrub: true
   }
-})
+});
 
 // section-3
 gsap
@@ -75,7 +117,7 @@ paths.forEach((el) => {
         start: 'top 50%',
         end: 'top 10%',
         scrub: true,
-        markers: true,
+        // markers: true,
       }
     })
     .to(el, {
@@ -164,6 +206,7 @@ function preloadImages() {
 }
 
 function initAnimationPreset() {
+  Splitting();
   gsap.registerPlugin(ScrollTrigger)
   gsap.registerPlugin(TextPlugin)
   const lenis = new Lenis()

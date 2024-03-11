@@ -114,6 +114,10 @@ img {
   overflow: hidden;
 }
 
+.content__title-main {
+  font-size: 10vw;
+}
+
 .content--centered {
   display: flex;
   justify-content: center;
@@ -168,7 +172,8 @@ img {
 }
 
 .section-2__title {
-  font-size: 5vw;
+  text-align: center;
+  font-size: 15vw;
 }
 
 .section-3 {

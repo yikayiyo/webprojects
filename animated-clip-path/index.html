@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./splitting.css">
   <link rel="stylesheet" href="./style.css">
-  <title>Animated-clip-path</title>
+  <title>Text, SVG Animation</title>
 </head>
 
 <body>
   <section class="content content--centered section-1">
     <div class="content__title"> <span class="content__title-pre content__title-pre--offset">Animated</span>
-      <h2 class="content__title-main">SVG Shapes</h2>
+      <h2 class="content__title-main">SVG Shapes & Text</h2>
     </div>
     <div class="content__scroll">
       <span>
@@ -41,9 +42,9 @@
       data-path-to="M 0 0 C 40 10 60 10 100 0 L 0 0 Z" vector-effect="non-scaling-stroke" />
   </svg>
   <section class="content content--centered section-2">
-    <div class="section-2__title"> <span class="content__title-pre content__title-pre--offset">Love</span>
-      <h2 class="content__title-main">& Peace</h2>
-    </div>
+    <h2 class="section-2__title" data-splitting>
+      Love & Peace
+    </h2>
   </section>
   <section class="content section-3">
     <div class="section-3__title"> <span class="">Love</span>
@@ -149,6 +150,7 @@
   <script src="./js/TextPlugin.min.js"></script>
   <script src="./js/lenis.min.js"></script>
   <script src="./js/imagesloaded.min.js"></script>
+  <script src="./js/splitting.min.js"></script>
   <script type="module" src="./main.js"></script>
 </body>
 
